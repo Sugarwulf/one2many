@@ -1,0 +1,15 @@
+<h2>Home</h2>
+
+<a href="/add">Add Place</a>
+
+<hr>
+
+<label for="Categories">Search by category</label> <br>
+<select ng-model="vm.category" ng-change="vm.getPlaces()" >
+<option value="retailer">Retailer</option>
+<option value="active gun range">Active Gun Range</option>
+</select>
+
+<ul>
+  <li ng-repeat="p in vm.places">{{p.name}} | {{p.address}} <a href="/edit/{{p._id}}">Edit</a> <a ng-click="vm.deletePlace(p._id)">Delete</a></li>
+</ul>

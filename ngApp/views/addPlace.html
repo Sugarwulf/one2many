@@ -1,0 +1,12 @@
+<h2>Add Place</h2>
+
+<input type="text" placeholder="name" ng-model="vm.place.name">
+<input type="text" placeholder="address" ng-model="vm.place.address">
+
+
+<select ng-model="vm.place.category">
+<option value="retailer">Retailer</option>
+<option value="active gun range">Active Gun Range</option>
+</select>
+
+<button type="button" ng-click="vm.addPlace()">Add</button>
